@@ -8,8 +8,12 @@
     /*background-color: rgba(255, 0, 0, 0.3);  /* red with opacity */
     background-color: rgba(0, 255, 0, 0.3);  /* green with opacity */
     /*background-color: rgba(0, 0, 255, 0.3);  /* blue with opacity */;
+  
+  }
+
+  body {
     border: 2px solid powderblue;
-      
+       
   }
   h1 {
     color: black;
