@@ -102,7 +102,7 @@ width:350px;
 margin-top:6px;
 margin-left:150px;
 font-weight:bold;
-float:left;
+clear:left;
 }
 .subtitle 
 {
