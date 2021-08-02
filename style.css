@@ -114,6 +114,7 @@ font-size:15px;
 #navigation
 {
 list-style-type:none;
+float:right;
 }
 li 
 {
