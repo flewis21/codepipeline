@@ -1,135 +1,145 @@
 <style>
-  .header {
-	  width:100%;
-	  height:60px;
-	  background-color:#E6E6FA;
+    .header {
+	    width:100%;
+	    height:60px;
+	    background-color:#E6E6FA;
 }
 
-  .logo {
-	color:#663399;
-	font-size:25px;
-	font-family:verdana;
-	text-align:left;
-	margin-top:0px;
-	float:left;
-	margin:0px;
-	line-height:50px;
-	padding-left:9px;
+    .logo {
+	    color:#663399;
+	    font-size:25px;
+	    font-family:verdana;
+	    text-align:left;
+	    margin-top:0px;
+	    float:left;
+	    margin:0px;
+	    line-height:50px;
+	    padding-left:9px;
 }
 
-  #main {
+    #main {
     
-    /*background-color: hsl(120, 100%, 50%);  /* green */
-    /*background-color: hsl(120, 100%, 75%);  /* light green */
-    /*background-color: hsl(120, 100%, 25%);  /* dark green */
-    /*background-color: hsl(120, 60%, 70%);   /* pastel green */
-    /*background-color: rgba(255, 0, 0, 0.3);  /* red with opacity */
-    /*background-color: rgba(0, 255, 0, 0.3);  /* green with opacity */
-    /*background-color: rgba(0, 0, 255, 0.3);  /* blue with opacity */;
-    background-color: rgb(191, 214, 255);
-    border: 2px solid powderblue;
-    margin: 0px;
-    padding: 0px;
-}
-.container  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-}
-.panel {
-    background: rgb(255, 148, 148);
-    height: 100%;
-    width: 100%;
-}
-.muo-text {
-    font-size: 3em;
-    font-weight: bolder;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
+        /*background-color: hsl(120, 100%, 50%);  /* green */
+        /*background-color: hsl(120, 100%, 75%);  /* light green */
+        /*background-color: hsl(120, 100%, 25%);  /* dark green */
+        /*background-color: hsl(120, 60%, 70%);   /* pastel green */
+        /*background-color: rgba(255, 0, 0, 0.3);  /* red with opacity */
+        /*background-color: rgba(0, 255, 0, 0.3);  /* green with opacity */
+        /*background-color: rgba(0, 0, 255, 0.3);  /* blue with opacity */
+        background-color: rgb(0, 255, 0);
+        border: 2px solid powderblue;
+        margin: 0px;
+        padding: 0px;
 }
 
-  }
-  h1 {
-    color: black;
-    fontfamily: Times New Roman;
-    background-color: red;
-    fontsize: 300%;
-    margin: 10px;
+    .container  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+}
+
+    .panel {
+        background: rgb(255, 148, 148);
+        height: 100%;
+        width: 100%;
+}
+
+    .muo-text {
+        font-size: 3em;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: absolute;
+}
+
+    h1 {
+        color: black;
+        font-family: Lato;
+        background-color: red;
+        font-size: 300%;
+        margin: 10px;
 
 }
-  p {
-    color: purple;
-    fontfamily: lato;
-    background-color: gold;
-    fontsize: 160%;
-    margin: 10px;
+
+    p {
+        color: purple;
+        font-family: lato;
+        background-color: gold;
+        font-size: 160%;
+        margin: 10px;
 
 }
-  html {
-  --logic: if (x > 5) document.body.style.background = "blue";
+
+    html {
+        --logic: if (x > 5) document.body.style.background = "blue";
 }
-  tr {
-    cell-padding: 15px;
-  }
+
+    tr {
+        cell-padding: 15px;
+}
+
 #backing 
 {
-  background-image: url(../images/fire.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-image: url(../images/fire.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
 
 #nav
  {
-background-color:#262626;
-width:100%;
-height:50px;
-box-shadow: 0px 1px 50px #5E5E5E;
-position:fixed;
-top:0px;
+    background-color:#262626;
+    width:100%;
+    height:50px;
+    box-shadow: 0px 1px 50px #5E5E5E;
+    position:fixed;
+    top:0px;
 }
 
 .title
  {
-color:#EDEDED;
-font-family:verdana;
-font-size:25px;
-width:350px;
-margin-top:6px;
-margin-left:150px;
-font-weight:bold;
-clear:left;
+    color:#EDEDED;
+    font-family:verdana;
+    font-size:25px;
+    width:350px;
+    margin-top:6px;
+    margin-left:150px;
+    font-weight:bold;
+    clear:left;
 }
+
 .subtitle 
 {
-color:#EDEDED;
-font-family:verdana;
-font-size:15px;
+    color:#EDEDED;
+    font-family:verdana;
+    font-size:15px;
 }
 
 #navigation
 {
-list-style-type:none;
-float:right;
+    list-style-type:none;
+    float:right;
 }
+
 li 
 {
-display:inline;
-padding:10px;
+    display:inline;
+    padding:10px;
 }
+
 #nav a
 {
-font-family:verdana;
-text-decoration:none;
-color:#EDEDED;
+    font-family:verdana;
+    text-decoration:none;
+    color:#EDEDED;
 }
+
 #nav a:hover 
 {
-color:#BDBDBD;
+    color:#BDBDBD;
 }
 
 </style>
