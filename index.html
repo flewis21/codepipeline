@@ -1,78 +1,140 @@
 <!DOCTYPE html>
-    <html lang="en">
-      <?!= include('stylesheet'); ?>
-      <head>
-        <div class="header">
-          <title>Don´ Time Life Services</title>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width,initial-scale=1.0">
-          <meta name="google-signin-scope" content="profile email">
-          <meta name="google-signin-client_id" content="739921544160-nvqbr8cmqcs35n700q94mn5qnjh7vdr5.apps.googleusercontent.com">
-          <script src="https://apis.google.com/js/platform.js" async defer></script>
-          <base target="_top">
-          <link rel="stylesheet" href="style.css">
-        </div>  
-      </head>
-      <body>
-        <!------------------------------Navigation bar ------------------------->
-        <div class="html">
-        <div id="nav">
-        <p class="title"><a href="#">Wild Sagebrush<span class="subtitle">-A.B.S.</span></a></p>
+<html lang="en">
+  <?!= include('stylesheet'); ?>
+  <head>
+    <div class="header">
+      <title>Don´ Time Life Services</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="google-signin-scope" content="profile email" />
+      <meta
+        name="google-signin-client_id"
+        content="739921544160-nvqbr8cmqcs35n700q94mn5qnjh7vdr5.apps.googleusercontent.com"
+      />
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <base target="_top" />
+      <link rel="stylesheet" href="style.css" />
+    </div>
+  </head>
+  <body>
+    <!------------------------------Navigation bar ------------------------->
+    <div class="html">
+      <div id="nav">
+        <p class="title">
+          <a href="#">Wild Sagebrush<span class="subtitle">-A.B.S.</span></a>
+        </p>
         <h1 class="logo">Dangerous Combinations</h1>
         <ul id="navigation">
-            <table>
-              <tr>
-                <td><li><div id="main"></div>
-                  <form style="display:inline-block;line-height:52px;padding-right:14px">
-                  <input type="text" name="searchbar" placeholder="search. ." size="70" id="searchbar">
-                  </form></li></td>
-                <td><li><a href="index.html">Home</a></li></td>
-                <td><li><a href="#">Forum</a></li></td>
-                <td><li><a href="#">Events</a></li></td>
-                <td><li><a href="#">Gallery</a></li></td>
-                <td><li><a href="sipoc.html">Apply</a></li></td>
-                <td><li><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <table>
+            <tr>
+              <td>
+                <li>
+                  <div id="main"></div>
+                  <form
+                    style="
+                      display: inline-block;
+                      line-height: 52px;
+                      padding-right: 14px;
+                    "
+                  >
+                    <input
+                      type="text"
+                      name="searchbar"
+                      placeholder="search. ."
+                      size="70"
+                      id="searchbar"
+                    />
+                  </form>
+                </li>
+              </td>
+              <td>
+                <li><a href="index.html">Home</a></li>
+              </td>
+              <td>
+                <li><a href="#">Forum</a></li>
+              </td>
+              <td>
+                <li><a href="#">Events</a></li>
+              </td>
+              <td>
+                <li><a href="#">Gallery</a></li>
+              </td>
+              <td>
+                <li><a href="sipoc.html">Value Stream</a></li>
+              </td>
+              <td>
+                <li>
+                  <input
+                    type="button"
+                    id="clickURL"
+                    value="Value Stream"
+                    onclick="doStuff()"
+                  />
+                </li>
+              </td>
+              <td>
+                <li>
+                  <div
+                    class="g-signin2"
+                    data-onsuccess="onSignIn"
+                    data-theme="dark"
+                  ></div>
+                  <?!= include('localStorage'); ?>
                   <script>
                     function onSignIn(googleUser) {
                       // Useful data for your client-side scripts:
                       var profile = googleUser.getBasicProfile();
                       console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-                      console.log('Full Name: ' + profile.getName());
-                      console.log('Given Name: ' + profile.getGivenName());
-                      console.log('Family Name: ' + profile.getFamilyName());
+                      console.log("Full Name: " + profile.getName());
+                      console.log("Given Name: " + profile.getGivenName());
+                      console.log("Family Name: " + profile.getFamilyName());
                       console.log("Image URL: " + profile.getImageUrl());
                       console.log("Email: " + profile.getEmail());
-              
+
                       // The ID token you need to pass to your backend:
                       var id_token = googleUser.getAuthResponse().id_token;
                       console.log("ID Token: " + id_token);
-                    };
+                    }
                   </script>
-                </li></td>
-              </tr>
-            </table>
+                </li>
+              </td>
+            </tr>
+          </table>
         </ul>
         <div class="panel">
-        <h1>Featured Artist:</h1>
+          <h1>Featured Artist:</h1>
 
+          <!--------------------beginning of main pages header ------------------->
+          <!------------------------------------main --------------------------------->
 
-        <!--------------------beginning of main pages header ------------------->
-        <!------------------------------------main --------------------------------->    
-
-        <p>Larry Henry!</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRdRMaOma2eOjpse2Drkww9jQkrTc9CiD1maR41MUfJBsnDkVR9j0wIQMjHq1jnCZIyZ4wyRMu2MnYV/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-
-        </div></div>
-        <div class="logo"></div>
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-        <df-messenger
-          df-cx="true"
-          chat-title="Volunteer Pro Bono Agency"
-          agent-id="07d84447-d958-451a-b205-bc0a63eaae29"
-          language-code="en"
-        ></df-messenger>
-
+          <p>Larry Henry!</p>
+          <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRdRMaOma2eOjpse2Drkww9jQkrTc9CiD1maR41MUfJBsnDkVR9j0wIQMjHq1jnCZIyZ4wyRMu2MnYV/embed?start=true&loop=true&delayms=3000"
+            frameborder="0"
+            width="960"
+            height="749"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+          ></iframe>
         </div>
-      </body>
-    </html>
+      </div>
+      <div class="logo"></div>
+      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+      <df-messenger
+        df-cx="true"
+        chat-title="Volunteer Pro Bono Agency"
+        agent-id="07d84447-d958-451a-b205-bc0a63eaae29"
+        language-code="en"
+      ></df-messenger>
+    </div>
+    <span id="navMessage"><?= message ?></span>
+    <? const url = getUrl(); ?><input
+      type="hidden"
+      value="<?= url ?>"
+      id="url"
+    />
+    <?!= include('userClicked'); ?>
+    <?!= include('navLogic'); ?>
+  </body>
+</html>
