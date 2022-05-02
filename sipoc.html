@@ -1,38 +1,95 @@
 <!DOCTYPE html>
 <html>
+  <?!= include('stylesheet'); ?>
   <head>
-      <title>Don´ Time Life Services</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      <meta name="google-signin-scope" content="profile email">
-      <meta name="google-signin-client_id" content="739921544160-nvqbr8cmqcs35n700q94mn5qnjh7vdr5.apps.googleusercontent.com">
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
-      <base target="_top">
-      <link rel="stylesheet" href="style.css">
+    <title>Don´ Time Life Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="739921544160-nvqbr8cmqcs35n700q94mn5qnjh7vdr5.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <base target="_top" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-<!------------------------------Navigation bar ------------------------->
-<div id="nav">
-<p class="title"><a href="index.html">Wild Sagebrush<span class="subtitle">-A.B.S.</span></a></p>
+    <!------------------------------Navigation bar ------------------------->
+    <div id="nav">
+      <p class="title">
+        <a href="index.html"
+          >Wild Sagebrush<span class="subtitle">-A.B.S.</span></a
+        >
+      </p>
 
-<ul id="navigation">
+      <ul id="navigation">
+        <table>
+          <tr>
+            <td>
+              <li><a href="index.html">Home</a></li>
+            </td>
+            <td>
+              <li><a href="#">Forum</a></li>
+            </td>
+            <td>
+              <li><a href="#">Events</a></li>
+            </td>
+            <td>
+              <li><a href="#">Gallery</a></li>
+            </td>
+            <td>
+              <li><a href="sipoc.html">Apply</a></li>
+            </td>
+            <td>
+              <li>
+                <input
+                  type="button"
+                  id="clickURL"
+                  value="Back to Main Menu"
+                  onclick="doStuff()"
+                />
+              </li>
+            </td>
+          </tr>
+        </table>
+      </ul>
+    </div>
+
+    <!------------------------------------main --------------------------------->
     <table>
       <tr>
-<td><li><a href="index.html">Home</a></li></td>
-<td><li><a href="#">Forum</a></li></td>
-<td><li><a href="#">Events</a></li></td>
-<td><li><a href="#">Gallery</a></li></td>
-<td><li><a href="sipoc.html">Apply</a></li></td>
+        <td>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf7eQty92OWCEw_YZ4Irf-PpjYboaKysgVLIBnxESn-TcRfnQ/viewform?embedded=true"
+            width="640"
+            height="3686"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Loading…</iframe
+          >
+        </td>
+        <td>
+          <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSq6HBWVkXDbQatjrtodxKlGSDJkrj0Uc70jRN6vhzDmvW3RPjysRGhnjCyGZ77vaKLl0IVqB3UDQO3/embed?start=false&loop=false&delayms=60000"
+            frameborder="0"
+            width="960"
+            height="3715"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+          ></iframe>
+        </td>
       </tr>
-      </table>
-</ul>
-</div>
-
-<!------------------------------------main --------------------------------->
-    <table><tr><td>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7eQty92OWCEw_YZ4Irf-PpjYboaKysgVLIBnxESn-TcRfnQ/viewform?embedded=true" width="640" height="3686" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </td><td>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSq6HBWVkXDbQatjrtodxKlGSDJkrj0Uc70jRN6vhzDmvW3RPjysRGhnjCyGZ77vaKLl0IVqB3UDQO3/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="3715" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-      </td></tr></table>
+    </table>
+    <? const url = getUrl(); ?><input
+      type="hidden"
+      value="<?= url ?>"
+      id="url"
+    />
+    <?!= include('userBackClicked'); ?>
+    <?!= include('navLogic'); ?>
+    <?!= include('localStorage'); ?>
   </body>
 </html>
