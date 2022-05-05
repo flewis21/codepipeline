@@ -9,8 +9,13 @@
   }
 
   function afterInput(e) {
-    // console.log(e.target.value);
+    const fetchThisUrl = 'https://www.bing.com/search?q='e.target.value;
+    console.log(fetchThisUrl);
     localStorage.setItem("searchTerm", e.target.value);
+    // return fetchThisUrl
+  }
+
+  function fetchUrl() {
   }
 
   document.addEventListener("DOMContentLoaded", pageLoad);
