@@ -1,0 +1,24 @@
+{
+  "name": "codepipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scheck": "prettier -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flewis21/codepipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flewis21/codepipeline/issues"
+  },
+  "homepage": "https://github.com/flewis21/codepipeline#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.46"
+  }
+}
