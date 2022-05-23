@@ -7,8 +7,3 @@
       overflow-x: hidden;
     }
   }
-  @media (min-width: 400px) {
-    .content-intro-wrapper {
-      min-height: 700px;
-    }
-  }
