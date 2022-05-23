@@ -1,5 +1,5 @@
 
-  @media only screen and (max-width: 100%) {
+  @media only screen and (max-width: auto) {
     html,body {
       width: 100%;
       height: 100%;
