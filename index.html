@@ -20,6 +20,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"
+      integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <title>Don'time Life Services</title>
   </head>
@@ -38,6 +44,38 @@
           src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJfO_vNE2d5bvp82yEIC1u_OgwS28bvakKeNEpWX0a2iKn-UE6nO4XuXJIHTWeQuBfUV8k9dPo4aj_r3wHTl6Wkau66dO4jNSaUWyffEifjrha77jYoxTEgKvB7nLGxKs3TWdzTuMBcBSZCkdrN4M4CP9cGdFFf-3TkAR1nM7oQw5tlo3_drrb11Hq/s400/Snapchat-1098841028.jpg"
       /></a>
     </div>
+    <div class="drumkit">
+      <div class="pad" data-sound="the other side_2">
+        <img
+          alt="clap"
+          border="0"
+          width="320"
+          data-original-height="199"
+          data-original-width="199"
+          src="https://th.bing.com/th/id/OIP.JpBAWi0faNk7lsSAAY9rcAHaHa?w=199&amp;h=199&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
+        />
+      </div>
+      <div class="pad" data-sound="the other side_3">
+        <img
+          alt="hihat"
+          border="0"
+          width="320"
+          data-original-height="180"
+          data-original-width="247"
+          src="https://th.bing.com/th/id/OIP.Z2Cmvma5zzsdLBjdsxCDPAHaFO?w=247&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
+        />
+      </div>
+      <div class="pad" data-sound="the other side_4">
+        <img
+          alt="closed-hihat"
+          border="0"
+          height="320"
+          data-original-height="180"
+          data-original-width="172"
+          src="https://th.bing.com/th/id/OIP.AEU8UDpcOGQdwQGkSddwcQHaHa?w=172&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
+        />
+      </div>
+    </div>
     <div class="separator video-container wrap-element" style="clear: both">
       <iframe
         class="wrapped-iframe"
@@ -49,6 +87,24 @@
         allowfullscreen
       ></iframe>
     </div>
+    <script>
+      const music = new Howl({
+        src: ["./dontime/music/music.webm", "./dontime/music/music.mp3"],
+        sprite: {
+          "the other side_2": [0, 280.8616780045352],
+          "the other side_3": [2000, 68.41269841269826],
+          "the other side_4": [4000, 190.31746031746],
+        },
+      });
+
+      const drumkit = document.querySelector(".drumkit");
+      drumkit.addEventListener("click", () => {
+        if (event.target.classlist.contains("pad")) {
+          let soundToPlay = event.target.dataset.sound;
+          music.play(soundToPlay);
+        }
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
