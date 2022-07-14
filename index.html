@@ -104,6 +104,18 @@
           music.play(soundToPlay);
         }
       });
+      document
+        .querySelector(".drumkit")
+        .setAttribute(
+          "style",
+          "display: flex;flex-wrap: wrap;justify-content: center;height: 100vh;"
+        );
+      document.querySelectorAll(".pad").forEach((r) => {
+        r.setAttribute(
+          "style",
+          "display: flex;justify-content: center;align-items: center;margin: 10px;flex: 1 0 calc(33.333% - 20px);background: radial-gradient(#e18174, #d15746);border-radius: 10px;"
+        );
+      });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
