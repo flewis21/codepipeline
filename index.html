@@ -88,6 +88,11 @@
       ></iframe>
     </div>
     <script>
+      document
+        .querySelector("html")
+        .setAttribute("style", "margin: 0;padding: 0;");
+    </script>
+    <script>
       const music = new Howl({
         src: ["./dontime/music/music.webm", "./dontime/music/music.mp3"],
         sprite: {
