@@ -70,7 +70,7 @@
     <div class="separator video-container wrap-element" style="clear: both">
       <iframe
         class="wrapped-iframe"
-        src='https://script.google.com/macros/s/AKfycbz_sVnAmDvHrRN-miNP7JwUiCkjM9oY49Tt924TNhoocq50qQwtYRwl8qcN4UtEuGOMbQ/exec?webApp=iframeJSON&xpath="/"'
+        src="https://script.google.com/macros/s/AKfycbzTowb7AmswZhlXx3z6nOMifRFnLhG5L89PQ0b_-hrGeMIh1KIooCoJfsj-FFr4ILur_Q/exec?webApp=request&sheetName=Inventory&headers=3&q"
         gesture="media"
         allow="encrypted-media"
         title="Dontime Life Website"
@@ -112,22 +112,12 @@
       });
     </script>
     <script>
-      const output = document.querySelector(".output");
       const url =
         "https://script.google.com/macros/s/AKfycbyMOUlyhG9a-uhdvupNobRTlXRTwtytGyA_ZcYs1Al1TcPlkVPwUqt6hbCTHUDR7RjM1Q/exec";
-      output.textContent = "Hello World!";
+      const output = document.querySelector(".output");
+      loadData();
 
-      document.addEventListener("DOMContentLoaded", init);
-      function init() {
-        console.log("ready");
-        fetch(url)
-          .then((res) => {
-            return res.json();
-          })
-          .then((data) => {
-            console.log(data);
-          });
-      }
+      function loadData() {}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
