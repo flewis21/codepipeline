@@ -21,12 +21,11 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"
-      integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
     <title>Don'time Life Services</title>
   </head>
 
@@ -45,33 +44,24 @@
       /></a>
     </div>
     <div class="drumkit">
-      <div class="pad" data-sound="the other side_2">
+      <div class="pad" data-sound="theotherside_2">
         <img
           alt="clap"
-          border="0"
-          width="320"
-          data-original-height="199"
-          data-original-width="199"
+          class="pad-image"
           src="https://th.bing.com/th/id/OIP.JpBAWi0faNk7lsSAAY9rcAHaHa?w=199&amp;h=199&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
         />
       </div>
-      <div class="pad" data-sound="the other side_3">
+      <div class="pad" data-sound="theotherside_3">
         <img
           alt="hihat"
-          border="0"
-          width="320"
-          data-original-height="180"
-          data-original-width="247"
+          class="pad-image"
           src="https://th.bing.com/th/id/OIP.Z2Cmvma5zzsdLBjdsxCDPAHaFO?w=247&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
         />
       </div>
-      <div class="pad" data-sound="the other side_4">
+      <div class="pad" data-sound="theotherside_4">
         <img
           alt="closed-hihat"
-          border="0"
-          height="320"
-          data-original-height="180"
-          data-original-width="172"
+          class="pad-image"
           src="https://th.bing.com/th/id/OIP.AEU8UDpcOGQdwQGkSddwcQHaHa?w=172&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7"
         />
       </div>
@@ -96,29 +86,27 @@
       const music = new Howl({
         src: ["./dontime/music/music.webm", "./dontime/music/music.mp3"],
         sprite: {
-          "the other side_2": [0, 280.8616780045352],
-          "the other side_3": [2000, 68.41269841269826],
-          "the other side_4": [4000, 190.31746031746],
+          theotherside_2: [0, 280.8616780045352],
+          theotherside_3: [2000, 68.41269841269826],
+          theotherside_4: [4000, 190.31746031746],
         },
       });
-
+      //   music.play("the other side_2");
       const drumkit = document.querySelector(".drumkit");
+      drumkit.setAttribute(
+        "style",
+        "display: flex; flex-wrap: wrap; justify-content: center; height: 100vh;"
+      );
       drumkit.addEventListener("click", () => {
         if (event.target.classlist.contains("pad")) {
           let soundToPlay = event.target.dataset.sound;
           music.play(soundToPlay);
         }
       });
-      document
-        .querySelector(".drumkit")
-        .setAttribute(
-          "style",
-          "display: flex;flex-wrap: wrap;justify-content: center;height: 100vh;"
-        );
       document.querySelectorAll(".pad").forEach((r) => {
         r.setAttribute(
           "style",
-          "display: flex;justify-content: center;align-items: center;margin: 10px;flex: 1 0 calc(33.333% - 20px);background: radial-gradient(#e18174, #d15746);border-radius: 10px;"
+          "display: flex; justify-content: center; align-items: center; margin: 10px; flex: 1 0 calc(33.333% - 20px); background: radial-gradient(#e18174, #d15746); border-radius: 10px;"
         );
       });
     </script>
