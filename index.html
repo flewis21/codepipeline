@@ -66,6 +66,7 @@
         />
       </div>
     </div>
+    <div class="output"></div>
     <div class="separator video-container wrap-element" style="clear: both">
       <iframe
         class="wrapped-iframe"
@@ -109,6 +110,24 @@
           "display: flex; justify-content: center; align-items: center; margin: 10px; flex: 1 0 calc(33.333% - 20px); background: radial-gradient(#e18174, #d15746); border-radius: 10px;"
         );
       });
+    </script>
+    <script>
+      const output = document.querySelector(".output");
+      const url =
+        "https://script.google.com/macros/s/AKfycbyMOUlyhG9a-uhdvupNobRTlXRTwtytGyA_ZcYs1Al1TcPlkVPwUqt6hbCTHUDR7RjM1Q/exec";
+      output.textContent = "Hello World!";
+
+      document.addEventListener("DOMContentLoaded", init);
+      function init() {
+        console.log("ready");
+        fetch(url)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+          });
+      }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
